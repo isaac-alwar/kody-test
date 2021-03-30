@@ -1,0 +1,8 @@
+{
+  "name": "KodyTest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "0a20a0be"
+}
