@@ -8,8 +8,6 @@ import { IonicModule } from '@ionic/angular';
 import { DonePageRoutingModule } from './done-routing.module';
 
 import { DonePage } from './done.page';
-// import { MessageComponentModule } from '../message/message.module';
-
 @NgModule({
   imports: [
     CommonModule,
