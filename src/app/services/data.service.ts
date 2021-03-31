@@ -1,83 +1,44 @@
 import { Injectable } from '@angular/core';
 
-export interface Message {
-  fromName: string;
-  subject: string;
-  date: string;
-  id: number;
-  read: boolean;
+export interface Item {
+  title: string;
+  description: string;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  public messages: Message[] = [
+  public items: Item[] = [
     {
-      fromName: 'Matt Chorsey',
-      subject: 'New event: Trip to Vegas',
-      date: '9:32 AM',
-      id: 0,
-      read: false
-    },
-    {
-      fromName: 'Lauren Ruthford',
-      subject: 'Long time no chat',
-      date: '6:12 AM',
-      id: 1,
-      read: false
-    },
-    {
-      fromName: 'Jordan Firth',
-      subject: 'Report Results',
-      date: '4:55 AM',
-      id: 2,
-      read: false
-    },
-    {
-      fromName: 'Bill Thomas',
-      subject: 'The situation',
-      date: 'Yesterday',
-      id: 3,
-      read: false
-    },
-    {
-      fromName: 'Joanne Pollan',
-      subject: 'Updated invitation: Swim lessons',
-      date: 'Yesterday',
-      id: 4,
-      read: false
-    },
-    {
-      fromName: 'Andrea Cornerston',
-      subject: 'Last minute ask',
-      date: 'Yesterday',
-      id: 5,
-      read: false
-    },
-    {
-      fromName: 'Moe Chamont',
-      subject: 'Family Calendar - Version 1',
-      date: 'Last Week',
-      id: 6,
-      read: false
-    },
-    {
-      fromName: 'Kelly Richardson',
-      subject: 'Placeholder Headhots',
-      date: 'Last Week',
-      id: 7,
-      read: false
-    }
+      "title": "minim consequat",
+      "description": "Est reprehenderit excepteur nostrud laboris magna. Culpa magna cupidatat eu reprehenderit exercitation tempor exercitation sit id tempor."
+  },
+  {
+      "title": "eu proident",
+      "description": "Qui mollit dolore dolor pariatur magna fugiat anim voluptate eu. Consectetur qui aliqua irure fugiat laborum quis anim."
+  },
+  {
+      "title": "cillum in",
+      "description": "Qui cillum elit mollit nulla deserunt voluptate in et esse officia. In exercitation irure fugiat officia sint do sunt adipisicing labore reprehenderit qui in."
+  },
+  {
+      "title": "tempor sunt",
+      "description": "Nulla aliquip consectetur exercitation tempor. Reprehenderit irure enim pariatur nostrud incididunt incididunt eiusmod ullamco eu mollit et."
+  },
+  {
+      "title": "veniam cillum",
+      "description": "Sunt cupidatat duis tempor excepteur pariatur excepteur velit ad non. Et consequat officia irure cupidatat cillum ex do officia enim do et velit incididunt anim."
+  }
   ];
 
   constructor() { }
 
-  public getMessages(): Message[] {
-    return this.messages;
+  public getItems(): Item[] {
+    return this.items;
   }
 
-  public getMessageById(id: number): Message {
-    return this.messages[id];
+  public getItemById(title: string): Item {
+    return this.items[title];
   }
 }
