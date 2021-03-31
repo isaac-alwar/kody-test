@@ -3,7 +3,8 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-}
+
+
 
 ion-card{
   margin-top: 130px;
@@ -62,6 +63,9 @@ ion-card{
       }
   }
 
+
+
+
   .bottom-section{
   margin-top: 50px;
   display: flex;
@@ -78,6 +82,10 @@ ion-card{
     color:#fff;
   }
 
+  ion-content .bottom-section {
+    padding:
+      50px }
+
   span{
       margin-top: 10px;
       font-weight: 330;
@@ -86,4 +94,5 @@ ion-card{
       }
   }
   }
+}
 }

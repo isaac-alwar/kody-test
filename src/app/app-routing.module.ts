@@ -7,10 +7,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
-  {
-    path: 'message/:id',
-    loadChildren: () => import('./view-message/view-message.module').then( m => m.ViewMessagePageModule)
-  },
+  // {
+  //   path: 'item/:id',
+  //   loadChildren: () => import('./view-message/view-message.module').then( m => m.ViewMessagePageModule)
+  // },
   {
     path: '',
     redirectTo: 'login',
@@ -28,6 +28,11 @@ const routes: Routes = [
     path: 'done',
     loadChildren: () => import('./done/done.module').then( m => m.DonePageModule)
   },
+  {
+    path: 'item',
+    loadChildren: () => import('./item/item.module').then( m => m.ItemPageModule)
+  },
+
 
 ];
 
