@@ -1,4 +1,3 @@
-import { delay } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
@@ -21,7 +20,7 @@ export class LoadingPage implements OnInit {
     if (x === false) {
       this.router.navigate(['error']);
         } else {
-          setTimeout(() => this.handleLogin(), 3000);
+          setTimeout(() => this.handleLogin(), 2000);
           // this.handleLogin();
       }
     }
@@ -32,7 +31,7 @@ export class LoadingPage implements OnInit {
       // duration: 3000  >> shows data page behind the loading screen
     });
     await loader.present().then(() => {
-      this.goToHome();
+      this.goToDone();
       loader.dismiss();
     });
   }
@@ -42,8 +41,8 @@ export class LoadingPage implements OnInit {
     // Math.floor(Math.random() * 2) === 0 ? false : true;
       }
 
-  goToHome(){
-    this.router.navigate(['home']);
+  goToDone(){
+    this.router.navigate(['done']);
      }
 
 }
