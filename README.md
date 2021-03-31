@@ -1,12 +1,11 @@
 # Getting Started with Kody-Test
 
-Built in the much improved Ionic 5 
-
-If you are reading this ... then you must have already cloned the project 
-
+Built in the much improved Ionic 5.
 
 
 ## Available Scripts
+
+Download or Clone the project then >>>>
 
 In the project directory, you can run:
 
