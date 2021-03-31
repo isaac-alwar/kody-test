@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>error</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card-header>
+    <ion-card-title>
+     Login Form Error
+    </ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+     <ion-item>
+      <h1>Encountered Error When Logging In ... </h1>
+      <h2>Tap to Retry</h2>
+     </ion-item>
+
+
+
+  <div class="retryBtn">
+    <ion-button (click)="retry()">Retry</ion-button>
+  </div>
+
+  </ion-card-content>
+  </ion-card>
+
+</ion-content>

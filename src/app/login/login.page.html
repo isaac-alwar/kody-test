@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>
+       Login Form
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+       <ion-item>
+        <ion-input placeholder="Enter Your Email" type="Email"></ion-input>
+       </ion-item>
+       <ion-item>
+         <ion-input placeholder="Enter Your Password" type="password"></ion-input>
+       </ion-item>
+
+       <div id="Login" class="Login bottom-section">
+         <ion-button (click)="logIn()">Login</ion-button>
+       </div>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
