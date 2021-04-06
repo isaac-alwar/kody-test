@@ -1,3 +1,4 @@
+import { LoadingPage } from './../loading/loading.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +16,7 @@ import { LoginPage } from './login.page';
     IonicModule,
     LoginPageRoutingModule
   ],
-  declarations: [LoginPage]
+  declarations: [LoadingPage],
+  exports: []
 })
 export class LoginPageModule {}

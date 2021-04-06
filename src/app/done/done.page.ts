@@ -1,18 +1,33 @@
-import { DataService } from './../services/data.service';
-import { Component, Input } from '@angular/core';
+import { ItemsService } from './../item/services/items.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Item } from '../model/item.model';
+import { Item } from '../item/model/item.model';
+import * as fromItems from 'src/app/item/reducers';
+import { select, Store } from '@ngrx/store';
+import * as fromDone from '../reducers';
+import { ItemActions } from '../item/actions';
+
+
 
 @Component({
   selector: 'app-done',
   templateUrl: './done.page.html',
   styleUrls: ['./done.page.scss'],
 })
-export class DonePage {
+export class DonePage implements OnInit {
+
   @Input() items: Item[];
-  constructor(private data: DataService, private router: Router) {}
+  items$: Observable<Item[]>;
+
+  constructor(
+    private itemsService: ItemsService,
+    private router: Router,
+    private store: Store<fromItems.State>
+    ) {
+      this.items$ = store.pipe(select(fromItems.selectItems));
+    }
 
   refresh(ev) {
     setTimeout(() => {
@@ -20,9 +35,10 @@ export class DonePage {
     }, 3000);
   }
 
-  getAll(): Observable<Item[]> {
-    return this.data.getAllItems().pipe(map(() => this.items));
+  ngOnInit() {
+    this.store.dispatch(ItemActions.getItemsSuccess({items: this.items}));
   }
+
   logOut(){
     this.router.navigate(['login']);
      }

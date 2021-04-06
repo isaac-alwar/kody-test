@@ -9,7 +9,7 @@ export const login = createAction(
 
 export const loginSuccess = createAction(
   '[Login/Page ] Login Success >>> Loading Page',
-  props<{items: Item[]}>()
+  props<{errorMsg: string, authenticator: boolean}>()
 );
 
 export const loginFailure = createAction(

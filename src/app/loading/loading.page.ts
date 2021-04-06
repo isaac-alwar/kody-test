@@ -1,6 +1,11 @@
+import * as fromItems from 'src/app/item/reducers';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
+import { Store, select } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import * as fromRoot from 'src/app/reducers';
+import { Item } from '../item/model/item.model';
 
 
 @Component({
@@ -10,7 +15,14 @@ import { LoadingController } from '@ionic/angular';
 })
 export class LoadingPage implements OnInit {
 
-  constructor(private router: Router, private loadingController: LoadingController) { }
+  items$: Observable<Item[]>;
+
+  constructor(
+    private router: Router,
+    private store: Store<fromRoot.State>,
+    private loadingController: LoadingController) {
+      this.items$ = store.pipe(select(fromItems.selectItems));
+    }
 
   ngOnInit(): void {
     const x = this.authenticator().valueOf();

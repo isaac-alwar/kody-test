@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Item } from '../services/data.service';
+import { Store } from '@ngrx/store';
+import * as fromItems from 'src/app/item/reducers';
+import { ItemActions } from './actions';
+import { Item } from './model/item.model';
 
 @Component({
   selector: 'app-item',
@@ -7,11 +10,13 @@ import { Item } from '../services/data.service';
   styleUrls: ['./item.page.scss'],
 })
 export class ItemPage implements OnInit {
-  @Input() item: Item;
+  @Input() items: Item[];
 
-  constructor() { }
+  constructor( private store: Store<fromItems.State>){ }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.store.dispatch(ItemActions.getItemsSuccess({items: this.items}));
+  }
 
   isIos() {
     const win = window as any;
