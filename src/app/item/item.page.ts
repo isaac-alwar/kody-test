@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import * as fromItems from 'src/app/item/reducers';
-import { ItemActions } from './actions';
 import { Item } from './model/item.model';
 
 @Component({
@@ -15,7 +14,6 @@ export class ItemPage implements OnInit {
   constructor( private store: Store<fromItems.State>){ }
 
   ngOnInit() {
-    this.store.dispatch(ItemActions.getItemsSuccess({items: this.items}));
   }
 
   isIos() {

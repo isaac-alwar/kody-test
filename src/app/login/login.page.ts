@@ -17,10 +17,6 @@ export class LoginPage implements OnInit {
 
   }
 
-  // onLogin(err: string, auth: boolean) {
-  //   this.store.dispatch(LoginActions.loginSuccess({authenticator: auth, errorMsg: err}));
-  // }
-
   logIn(err: string, auth: boolean){
     this.store.dispatch(LoginActions.loginSuccess({authenticator: auth, errorMsg: err}));
     this.router.navigate(['loading']);
