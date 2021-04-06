@@ -9,8 +9,8 @@ import { Item } from '../model/item.model';
 })
 export class ItemsService {
 
-  private API_PATH = 'https://jsonplaceholder.typicode.com/posts';
-  //'../assets/data/items.json';
+  private API_PATH = '../assets/data/items.json';
+
 
   constructor(private http: HttpClient) {}
 

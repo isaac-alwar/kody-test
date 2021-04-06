@@ -1,5 +1,5 @@
 import { props, createAction } from '@ngrx/store';
-import { Item } from '../model/item.model';
+import { Item } from '../item/model/item.model';
 
 
 /** ERROR ACTIONS */

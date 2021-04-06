@@ -2,12 +2,11 @@ import { ItemsService } from './../item/services/items.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { Item } from '../item/model/item.model';
 import * as fromItems from 'src/app/item/reducers';
 import { select, Store } from '@ngrx/store';
 import * as fromDone from '../reducers';
-import { ItemActions } from '../item/actions';
+import { ItemActions } from '../actions';
+import { Item } from '../item/model/item.model';
 
 
 

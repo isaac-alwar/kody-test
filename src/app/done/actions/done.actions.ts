@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Item } from 'src/app/item/model/item.model';
+import { Item } from '../../item/model/item.model';
 
 
 export const loadSuccess = createAction(

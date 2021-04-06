@@ -1,5 +1,4 @@
 import { createAction, props } from '@ngrx/store';
-import { Item } from '../model/item.model';
 
 
 /** LOGIN ACTIONS */

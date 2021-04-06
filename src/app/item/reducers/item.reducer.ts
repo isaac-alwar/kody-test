@@ -1,6 +1,8 @@
 import { createReducer, on } from '@ngrx/store';
-import {ItemActions} from '../actions';
+// import {ItemActions} from '../actions';
 import { Item } from '../model/item.model';
+import { ItemActions } from '../../actions';
+
 
 
 export const itemsFeatureKey = 'items';

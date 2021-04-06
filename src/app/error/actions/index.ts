@@ -1,3 +1,3 @@
-import * as ErrorActions from './error.actions';
+import * as ErrorActions from '../actions';
 
 export { ErrorActions };

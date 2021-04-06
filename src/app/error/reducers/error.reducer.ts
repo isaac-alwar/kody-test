@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import {ErrorActions} from '../actions';
+import {ErrorActions} from '../../actions';
 
 
 export const errorFeatureKey = 'error';

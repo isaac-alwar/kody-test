@@ -1,4 +1,4 @@
-import * as ItemActions from './item.actions';
+import * as ItemActions from '../actions';
 
 export {
   ItemActions,

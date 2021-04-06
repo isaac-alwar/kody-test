@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { catchError, exhaustMap, map } from 'rxjs/operators';
-import { ItemActions } from '../actions';
+import { ItemActions } from '../../actions';
 
 @Injectable()
 export class ItemEffects {
