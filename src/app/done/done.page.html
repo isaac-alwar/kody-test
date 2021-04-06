@@ -20,7 +20,7 @@
   </ion-header>
 
   <ion-list>
-    <app-item *ngFor="let item of getAll()" [item]="item"></app-item>
+    <app-item *ngFor="let item of items |async " [item]="item"></app-item>
   </ion-list>
 
   <div id="Login" class="Login bottom-section end">

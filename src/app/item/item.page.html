@@ -1,4 +1,4 @@
-<ion-item *ngIf="item" [routerLink]="'/item/' + item.title" [detail]="false">
+<ion-item *ngIf="item |async" [routerLink]="'/item/' + item.title" [detail]="false">
   <ion-label class="ion-text-wrap">
     <h2>
       {{ item.title }}

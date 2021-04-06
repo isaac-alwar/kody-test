@@ -1,6 +1,9 @@
-import { DataService, Item } from './../services/data.service';
+import { DataService } from './../services/data.service';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Item } from '../model/item.model';
 
 @Component({
   selector: 'app-done',
@@ -8,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./done.page.scss'],
 })
 export class DonePage {
-  @Input() item: Item;
+  @Input() items: Item[];
   constructor(private data: DataService, private router: Router) {}
 
   refresh(ev) {
@@ -17,8 +20,8 @@ export class DonePage {
     }, 3000);
   }
 
-  getAll(): Item[] {
-    return this.data.getItems();
+  getAll(): Observable<Item[]> {
+    return this.data.getAllItems().pipe(map(() => this.items));
   }
   logOut(){
     this.router.navigate(['login']);

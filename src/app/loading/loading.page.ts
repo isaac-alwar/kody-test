@@ -20,7 +20,8 @@ export class LoadingPage implements OnInit {
     if (x === false) {
       this.router.navigate(['error']);
         } else {
-          setTimeout(() => this.handleLogin(), 2000);
+          // setTimeout(() => this.handleLogin(), 2000);
+          this.router.navigate(['done']);
           // this.handleLogin();
       }
     }
@@ -28,7 +29,7 @@ export class LoadingPage implements OnInit {
   async handleLogin() {
     const loader = await this.loadingController.create({
       message: 'Please wait...',
-      // duration: 3000  >> shows data page behind the loading screen
+      duration: 3000  // >> shows data page behind the loading screen
     });
     await loader.present().then(() => {
       this.goToDone();
