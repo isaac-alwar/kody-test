@@ -26,3 +26,22 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](http://localhost:9876) for more information.
 
+### `ionic build`
+
+Builds the project ready for deployment.
+
+### `for Android`
+### `ionic capacitor run android`
+
+If you would like to see this run from an emulator running in Android Studio.
+
+
+### `for iOS`
+### `ionic capacitor run ios`
+
+If you would like to see this project run in Xcode. 
+
+
+
+
+
